@@ -5,5 +5,110 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
 
 /* UTILITIES */
+.colorw {
+  color: white;
+}
+.colorg {
+  color: grey;
+}
+.mt25 {
+  margin-top: 25px;
+}
+.br50 {
+  border-radius: 50%;
+}
+/* MAIN */
+main {
+  flex-grow: 1;
+  display: flex;
+}
+/* aside */
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  width: 200px;
+  flex-shrink: 0;
+}
+aside .top-section > *,
+aside .bottom-section {
+  padding: 0px 10px 0px;
+}
+/* aside logo */
+.logo-container {
+  height: 80px;
+  width: 100%;
+}
+.logo {
+  background-image: url("/img/logo.svg");
+  height: 100%;
+  width: 70%;
+  background-size: 100% 100%;
+}
+/* aside nav */
+.aside-nav {
+  margin-bottom: 10px;
+}
+.aside-nav.home {
+  border-left: 3px solid #adff2f;
+}
+.aside-nav img {
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+}
+.aside-nav span,
+.playlists span {
+  font-size: 13px;
+  font-weight: 600;
+}
+/* aside playlist section */
+.playlists li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.add-playlist {
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  background-color: grey;
+}
+.add-playlist span {
+  line-height: 30px;
+  font-size: 25px;
+}
+/* aside footer */
+.bottom-section {
+  margin-bottom: 5px;
+}
+.download {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.user img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: grey;
+  vertical-align: middle;
+}
+
+.user h5 {
+  display: inline-block;
+  margin-top: 10px;
+}
+/* main */
+.main-section {
+  flex-grow: 1;
+}
