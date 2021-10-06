@@ -137,6 +137,10 @@ aside .bottom-section {
   border: 1px solid white;
   cursor: pointer;
 }
+.main-section-header button:hover {
+  scale: 1.1;
+  transition: scale 0.2;
+}
 .main-content {
   height: calc(100vh - 120px);
   margin-top: 60px;
@@ -153,6 +157,18 @@ nav li {
   display: inline;
   margin: 0 10px;
   line-height: 25px;
+}
+.overlay {
+  position: relative;
+}
+.overlay i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  font-size: 50px;
+  color: white;
 }
 .recently-played,
 .for-user,
@@ -171,7 +187,21 @@ nav li {
   text-align: center;
 }
 .media-content img {
+  display: block;
   width: 100%;
+}
+.overlay:hover {
+  background-color: black;
+}
+.overlay img:hover {
+  opacity: 0.2;
+  cursor: pointer;
+}
+.overlay:hover .circle-icon {
+  display: block;
+}
+.overlay:hover i {
+  display: block;
 }
 
 /* FOOTER */
@@ -211,6 +241,9 @@ footer .left-section img {
   margin-right: 5px;
   cursor: pointer;
 }
+.left-section .icons i:hover {
+  color: white;
+}
 /* central section */
 footer .central-content {
   display: flex;
@@ -226,6 +259,10 @@ footer .controls i {
 }
 .central-icon {
   font-size: 30px;
+}
+.central-icon:hover {
+  scale: 1.2;
+  transition: scale 0.2;
 }
 .duration {
   position: relative;
@@ -265,16 +302,18 @@ footer .right-section {
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
+}
+.duration {
+  cursor: pointer;
 }
 .volume {
   width: 20px;
   border-color: white;
-  cursor: pointer;
 }
 .max-volume {
   width: 50px;
   border-color: grey;
-  cursor: pointer;
 }
 .circle-icon {
   font-size: 10px;
@@ -282,7 +321,7 @@ footer .right-section {
   position: absolute;
 }
 .volume-controls .circle-icon {
-  left: 15px;
+  left: 25%;
 }
 /* hover in footer parts */
 .currently-playing:hover span {
@@ -310,6 +349,11 @@ footer .right-section {
   }
   .time-line.unwatched {
     width: 200px;
+  }
+  .volume-controls:hover .circle-icon,
+  .duration:hover .circle-icon {
+    left: 25%;
+    opacity: 1;
   }
 }
 
