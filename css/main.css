@@ -30,6 +30,16 @@ span:hover {
 .br50 {
   border-radius: 50%;
 }
+.underline::after {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 5px;
+  background-color: greenyellow;
+}
 /* MAIN */
 main {
   flex-grow: 1;
@@ -98,6 +108,12 @@ aside .bottom-section {
   line-height: 30px;
   font-size: 25px;
 }
+.playlists li:first-child:hover .add-playlist {
+  background-color: white;
+}
+.playlists li:first-child:hover > span {
+  color: white;
+}
 /* aside footer */
 .bottom-section {
   margin-bottom: 5px;
@@ -157,6 +173,9 @@ nav li {
   display: inline;
   margin: 0 10px;
   line-height: 25px;
+}
+nav li:first-child {
+  position: relative;
 }
 .overlay {
   position: relative;
