@@ -11,6 +11,8 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #141922;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 span:hover {
   cursor: pointer;
@@ -42,7 +44,9 @@ aside {
   justify-content: space-between;
   background-color: black;
   width: 200px;
+  height: 100vh;
   flex-shrink: 0;
+  position: fixed;
 }
 aside .top-section > *,
 aside .bottom-section {
@@ -72,7 +76,10 @@ aside .bottom-section {
   width: 20px;
 }
 .aside-nav span,
-.playlists span {
+.playlists span,
+.media-content span,
+.for-user > span,
+.most-popular > span {
   font-size: 13px;
   font-weight: 600;
 }
@@ -115,13 +122,15 @@ aside .bottom-section {
 }
 /* main */
 .main-section {
+  margin-left: 200px;
   flex-grow: 1;
 }
 .main-section-header {
   padding: 20px;
-  margin-bottom: 10px;
   text-align: right;
   background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: calc(100vw - 200px);
 }
 .main-section-header button {
   background-color: transparent;
@@ -130,8 +139,12 @@ aside .bottom-section {
   border: 1px solid white;
   cursor: pointer;
 }
+.main-content {
+  margin-top: 60px;
+  padding: 10px 20px 10px 10px;
+}
 nav {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   text-align: center;
 }
@@ -139,4 +152,24 @@ nav li {
   list-style: none;
   display: inline;
   margin: 0 10px;
+  line-height: 25px;
+}
+.recently-played,
+.for-user,
+.most-popular {
+  margin: 25px 0;
+}
+.recently-played h3 {
+  margin-bottom: 15px;
+}
+.tracks {
+  display: flex;
+}
+.media-content {
+  padding: 10px;
+  width: calc(100% / 6);
+  text-align: center;
+}
+.media-content img {
+  width: 100%;
 }
