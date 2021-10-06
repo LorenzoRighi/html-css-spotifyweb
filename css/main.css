@@ -10,6 +10,11 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  background-color: #141922;
+}
+span:hover {
+  cursor: pointer;
+  color: white;
 }
 
 /* UTILITIES */
@@ -111,4 +116,27 @@ aside .bottom-section {
 /* main */
 .main-section {
   flex-grow: 1;
+}
+.main-section-header {
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main-section-header button {
+  background-color: transparent;
+  padding: 5px 20px;
+  border-radius: 15px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+nav {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+nav li {
+  list-style: none;
+  display: inline;
+  margin: 0 10px;
 }
