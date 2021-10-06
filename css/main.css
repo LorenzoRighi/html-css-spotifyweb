@@ -44,7 +44,7 @@ aside {
   justify-content: space-between;
   background-color: black;
   width: 200px;
-  height: 100vh;
+  height: 90vh;
   flex-shrink: 0;
   position: fixed;
 }
@@ -141,6 +141,7 @@ aside .bottom-section {
 }
 .main-content {
   margin-top: 60px;
+  margin-bottom: 40px;
   padding: 10px 20px 10px 10px;
 }
 nav {
@@ -172,4 +173,75 @@ nav li {
 }
 .media-content img {
   width: 100%;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #282828;
+  bottom: 0;
+  width: 100vw;
+}
+/* left section */
+footer .left-section {
+  display: flex;
+  padding: 10px;
+}
+footer .left-section img {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+}
+.currently-playing {
+  margin: 0 10px;
+}
+.currently-playing span {
+  font-size: 12px;
+}
+.left-section .icons {
+  margin-left: 20px;
+  line-height: 40px;
+}
+.left-section .icons i {
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* central section */
+footer .central-content {
+  display: flex;
+  flex-direction: column;
+}
+footer .controls {
+  text-align: center;
+}
+footer .controls i {
+  vertical-align: middle;
+  margin: 3px 15px;
+  cursor: pointer;
+}
+.central-icon {
+  font-size: 30px;
+}
+.duration {
+  display: flex;
+  align-items: center;
+}
+.duration span {
+  font-size: 12px;
+  margin: 0 5px;
+}
+.time-line {
+  height: 0;
+  border: 2px solid;
+  border-radius: 15px;
+}
+.time-line.watched {
+  width: 100px;
+  border-color: white;
+}
+.time-line.unwatched {
+  width: 400px;
+  border-color: grey;
 }
