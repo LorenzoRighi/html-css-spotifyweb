@@ -11,8 +11,6 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #141922;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 span:hover {
   cursor: pointer;
@@ -44,7 +42,7 @@ aside {
   justify-content: space-between;
   background-color: black;
   width: 200px;
-  height: 90vh;
+  height: calc(100vh - 60px);
   flex-shrink: 0;
   position: fixed;
 }
@@ -140,9 +138,10 @@ aside .bottom-section {
   cursor: pointer;
 }
 .main-content {
+  height: calc(100vh - 120px);
   margin-top: 60px;
-  margin-bottom: 40px;
   padding: 10px 20px 10px 10px;
+  overflow-y: auto;
 }
 nav {
   font-size: 12px;
@@ -158,7 +157,7 @@ nav li {
 .recently-played,
 .for-user,
 .most-popular {
-  margin: 25px 0;
+  margin: 25px 0 0;
 }
 .recently-played h3 {
   margin-bottom: 15px;
@@ -179,10 +178,13 @@ nav li {
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   background-color: #282828;
   bottom: 0;
   width: 100vw;
+  height: 60px;
+  padding-right: 20px;
 }
 /* left section */
 footer .left-section {
@@ -225,6 +227,7 @@ footer .controls i {
   font-size: 30px;
 }
 .duration {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -244,4 +247,51 @@ footer .controls i {
 .time-line.unwatched {
   width: 400px;
   border-color: grey;
+}
+.duration .circle-icon {
+  left: 130px;
+}
+/* right section */
+footer .right-section {
+  display: flex;
+  align-items: center;
+}
+.right-section .options i {
+  font-size: 15px;
+  margin: 0 10px;
+}
+.volume-controls {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.volume {
+  width: 20px;
+  border-color: white;
+  cursor: pointer;
+}
+.max-volume {
+  width: 50px;
+  border-color: grey;
+  cursor: pointer;
+}
+.circle-icon {
+  font-size: 12px;
+  opacity: 0;
+  position: absolute;
+}
+.volume-controls .circle-icon {
+  left: 15px;
+}
+/* hover in footer parts */
+.currently-playing:hover span {
+  text-decoration: underline;
+}
+.volume-controls:hover .volume,
+.duration:hover .watched {
+  border-color: #adff2f;
+}
+.volume-controls:hover .circle-icon,
+.duration:hover .circle-icon {
+  opacity: 1;
 }
