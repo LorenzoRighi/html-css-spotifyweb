@@ -414,6 +414,9 @@ footer .right-section {
   .time-line.unwatched {
     width: 100px;
   }
+  .duration .circle-icon {
+    left: 30%;
+  }
   .left-section .icons i {
     margin-bottom: 10px;
     display: block;
@@ -457,5 +460,79 @@ footer .right-section {
     margin-top: 10px;
     background-color: grey;
     vertical-align: middle;
+  }
+}
+@media screen and (min-width: 390px) and (max-width: 499px) {
+  .main-section {
+    margin-left: 50px;
+  }
+  .main-section-header {
+    width: calc(100vw - 50px);
+  }
+  .tracks {
+    flex-wrap: wrap;
+  }
+  .media-content {
+    width: calc(100% / 2);
+  }
+  .time-line.watched {
+    width: 20px;
+  }
+  .time-line.unwatched {
+    width: 80px;
+  }
+  .duration .circle-icon {
+    left: 30%;
+  }
+  .left-section .icons i {
+    margin-bottom: 10px;
+    display: block;
+  }
+  .right-section .options i {
+    margin: 0;
+  }
+  .left-section .icons {
+    margin-left: 5px;
+  }
+  aside {
+    width: 50px;
+  }
+  .aside-nav > span,
+  aside li > span,
+  .bottom-section span,
+  .bottom-section h5,
+  aside h4 {
+    display: none;
+  }
+  .add-playlist {
+    display: none;
+  }
+  .logo {
+    background-image: url("../img/logo-small.svg");
+    width: 100%;
+  }
+  /* aside footer */
+  .bottom-section {
+    margin-bottom: 5px;
+  }
+  .download {
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .user img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    background-color: grey;
+    vertical-align: middle;
+  }
+  footer .right-section .fa-solid.fa-list,
+  footer .right-section .fa-solid.fa-desktop {
+    display: none;
+  }
+  footer .controls i {
+    margin: 3px 5px;
   }
 }
